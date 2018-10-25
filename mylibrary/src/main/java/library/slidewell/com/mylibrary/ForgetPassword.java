@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class ForgetPassword extends AppCompatActivity {
    CardView SubmitUser;
-   EditText edEmail;
+   EditText edEmail,m;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

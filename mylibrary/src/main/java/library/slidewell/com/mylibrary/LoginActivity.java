@@ -111,7 +111,7 @@ public class LoginActivity extends AppCompatActivity {
     private void checkCredentials() {
         final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
         progressDialog.setCancelable(false);
-        progressDialog.setMessage("Please wait while login...");
+        progressDialog.setMessage("Authenticating...");
         mRequestQueue = Volley.newRequestQueue(this);
         if (new ConnectionHelper().isConnected(LoginActivity.this)) {
             progressDialog.show();
