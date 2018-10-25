@@ -58,7 +58,7 @@ public class ForgetPassword extends AppCompatActivity
 
     private boolean isValidEmail(CharSequence email)
     {
-        if (!TextUtils.isEmpty(email)) 
+        if (!TextUtils.isEmpty(email))
         {
             return Patterns.EMAIL_ADDRESS.matcher(email).matches();
         }
