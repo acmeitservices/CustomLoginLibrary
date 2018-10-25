@@ -71,7 +71,8 @@ public class LoginActivity extends AppCompatActivity {
                 {
                     e1.setError("Empty Username");
                     e1.requestFocus();
-                }else if(e2.getText().toString().length()==0)
+                }
+                else if(e2.getText().toString().length()==0)
                 {
                     e2.setError("Empty Password");
                     e2.requestFocus();
