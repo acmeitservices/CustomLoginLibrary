@@ -33,7 +33,7 @@ public class ForgetPassword extends AppCompatActivity
 
         userEmail = (EditText) findViewById(R.id.tvuserEmail);
         submitUser = (CardView) findViewById(R.id.SubmitUser);
-        getEmail = userEmail.getText().toString();
+      //  getEmail = userEmail.getText().toString();
 
 
         submitUser.setOnClickListener(new View.OnClickListener() {
