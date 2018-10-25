@@ -9,6 +9,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".ForgetPassword" />
         <activity android:name=".SplashActivity"></activity>
+        <activity android:name=".NavigationDrawerActivity"></activity>
     </application>
 
 </manifest>

@@ -50,9 +50,6 @@ public class ForgetPassword extends AppCompatActivity
                 {
                     userEmail.setError("Invalid Email");
                 }
-
-
-
             }
         });
     }
