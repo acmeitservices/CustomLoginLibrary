@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -26,15 +27,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
-  EditText e1,e2;
+   EditText e1,e2;
    Button btnLogin;
-   public static String loginResponse=null;
+    public static String loginResponse=null;
     public static String LOGINURL=null;
     public static String METHODTYPE=null;
     private RequestQueue mRequestQueue;
     private RequestQueue mRequestQueue1;
     LinearLayout mainlay;
     CardView cv_login;
+    TextView forgetPassword;
 
     //public static String METHODTYPE=null;
     @Override
@@ -46,6 +48,17 @@ public class LoginActivity extends AppCompatActivity {
         mainlay=(LinearLayout)findViewById(R.id.mainlay);
         btnLogin=(Button)findViewById(R.id.btnLogin);
         cv_login=(CardView)findViewById(R.id.Login_User);
+        forgetPassword = (TextView)findViewById(R.id.tvLoginForgetPassword) ;
+
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),ForgetPassword.class);
+                startActivity(intent);
+            }
+        });
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
