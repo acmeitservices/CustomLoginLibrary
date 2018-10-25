@@ -23,7 +23,7 @@ public class ForgetPassword extends AppCompatActivity
     EditText userEmail;
     CardView submitUser;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-    String getEmail;
+    String getEmail,post;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
