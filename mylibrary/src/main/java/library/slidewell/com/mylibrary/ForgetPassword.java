@@ -6,7 +6,9 @@ import android.support.test.espresso.remote.EspressoRemoteMessage;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,13 +45,22 @@ public class ForgetPassword extends AppCompatActivity
                 {
                     userEmail.setError("Empty Email");
                 }
-                else
+                else if(!isValidEmail(userEmail.getText().toString()))
                 {
-                    validateEmail();
+                    userEmail.setError("Invalid Email");
                 }
+
+
 
             }
         });
+    }
+
+    private boolean isValidEmail(CharSequence email) {
+        if (!TextUtils.isEmpty(email)) {
+            return Patterns.EMAIL_ADDRESS.matcher(email).matches();
+        }
+        return false;
     }
 
 //    public void setEmail(String emailValue)
@@ -59,36 +70,34 @@ public class ForgetPassword extends AppCompatActivity
 //    }
 
 
-    public void validateEmail()
-    {
-            userEmail.addTextChangedListener(new TextWatcher() {
-                @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after)
-                {
-
-                }
-
-                @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count)
-                {
-
-                }
-
-                @Override
-                public void afterTextChanged(Editable s)
-                {
-                    if (getEmail.matches(emailPattern) && s.length() > 0)
-                    {
-                        Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT).show();
-
-                    }
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(),"Invalid email address",Toast.LENGTH_SHORT).show();
-
-                    }
-                }
-
-            });
-    }
+//    public void validateEmail()
+//    {
+//            userEmail.addTextChangedListener(new TextWatcher() {
+//                @Override
+//                public void beforeTextChanged(CharSequence s, int start, int count, int after)
+//                {
+//
+//                }
+//
+//                @Override
+//                public void onTextChanged(CharSequence s, int start, int before, int count)
+//                {
+//
+//                }
+//
+//                @Override
+//                public void afterTextChanged(Editable s)
+//                {
+//                    if (getEmail.matches(emailPattern) && s.length() > 0)
+//                    {
+//                        Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT).show();
+//                    }
+//                    else
+//                    {
+//                        Toast.makeText(getApplicationContext(),"Invalid email address",Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//
+//            });
+//    }
 }
