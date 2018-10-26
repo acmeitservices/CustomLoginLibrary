@@ -10,17 +10,17 @@ import java.util.ArrayList;
 public class NavigationDrawerActivity extends AppCompatActivity{
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
 
-       //addMenuItemInNavMenuDrawer();
-
+       //addMenuItemInNavMenuDrawer() ;
 
     }
-
+//add menu to navigation drawer
     private void addMenuItemInNavMenuDrawer(String menName,ArrayList<String>menus)
     {
         //add menus
@@ -28,7 +28,8 @@ public class NavigationDrawerActivity extends AppCompatActivity{
 
         Menu menu = navView.getMenu();
         Menu submenu = menu.addSubMenu(menName);
-        for(int i=0;i<menus.size();i++) {
+        for(int i=0;i<menus.size();i++)
+        {
             submenu.add(menus.get(i));
         }
 
