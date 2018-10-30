@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GLOBAL_SEARCH"/>
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".CustomView.navAct">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +21,8 @@
         </activity>
         <activity android:name=".CustomView.LoginActivity" />
         <activity android:name=".CustomView.ForgetPassword" />
+        <activity android:name=".MainActivity" />
+        <!--<activity android:name=".CustomView.searchView"></activity>-->
     </application>
 
 </manifest>
